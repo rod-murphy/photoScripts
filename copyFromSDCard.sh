@@ -1,13 +1,15 @@
+#!/bin/bash
+
 #declare -a SRCS=(/media/canonSDCard/DCIM/100CANON/ /media/usbDriveA/DropboxPhoneUploads/)
 SRC=/media/canonSDCard/DCIM/100CANON/
 DEST=/media/usbDriveA/Photos/
 
-if [ ! -d "$SRC" ]
+if [ ! -d "$SRC" ]; then
   echo "$SRC doesn't exixt";
   exit 1;
 fi
 
-if [ ! -d "$DEST" ]
+if [ ! -d "$DEST" ]; then
   echo "$DEST doesn't exixt";
   exit 1;
 fi
@@ -17,5 +19,5 @@ if [ "$(ls -A $SRC)" ]; then
  #exiftool -r -d $DEST/%Y/%m-%d-RAW/%Y%m%d-%H%M%S.%%e "-FileName<DateTimeOriginal" -ext CR2 $SRC
  exiftool -r -v '-Directory<DateTimeOriginal' -d $DEST/%Y/%m-%d-%%e $SRC
 else
- echo "No photos found"
+ echo "No photos found";
 fi
