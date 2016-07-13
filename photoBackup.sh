@@ -1,5 +1,5 @@
-rsync --update --recursive --times --links --progress --compress --perms --rsh ssh /media/usbDriveA/Photos/ xbian@192.168.0.2:/media/273D-E810/Photos/Photos/
-# rsync --recursive --times --links -vv --progress --perms --rsh ssh /media/usbDriveA/Photos/ xbian@192.168.0.2:/media/273D-E810/Photos/Photos/
+rsync --update --recursive --times --links --progress --compress --perms --rsh ssh /media/usbDriveA/Photos/ xbian@192.168.0.2:/media/273D-E810/Photos/
+# rsync --recursive --times --links -vv --progress --perms --rsh ssh /media/usbDriveA/Photos/ xbian@192.168.0.2:/media/273D-E810/Photos/
 #rsync  version 3.0.9  protocol version 30
 #Copyright (C) 1996-2011 by Andrew Tridgell, Wayne Davison, and others.
 #Web site: http://rsync.samba.org/
